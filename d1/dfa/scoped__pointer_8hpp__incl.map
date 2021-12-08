@@ -1,0 +1,5 @@
+<map id="include/stick/memory/scoped_pointer.hpp" name="include/stick/memory/scoped_pointer.hpp">
+<area shape="rect" id="node1" title="Pointer that is automatically deallocated once it goes ot of the scope." alt="" coords="96,5,259,47"/>
+<area shape="rect" id="node2" href="$dd/de3/types_8hpp.html" title="Common types definitions." alt="" coords="5,102,155,129"/>
+<area shape="rect" id="node3" href="$df/d2d/scoped__pointer__impl_8hpp.html" title="Scoped pointer template implementations." alt="" coords="179,95,371,136"/>
+</map>
