@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memory_5ferror_0',['memory_error',['../d4/d76/classstick_1_1memory__error.html',1,'stick']]]
+  ['cast_5ferror_0',['cast_error',['../d3/d47/classstick_1_1cast__error.html',1,'stick']]]
 ];

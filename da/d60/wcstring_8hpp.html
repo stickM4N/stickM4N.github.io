@@ -28,9 +28,9 @@
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr id="projectrow">
-                    <td id="projectlogo"><img alt="Logo" src="../../stick_lib_logo.png"/></td>
+                    <td id="projectlogo"><img alt="Logo" src="../../stick-lib_logo.png"/></td>
                     <td id="projectalign">
-                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.1.0</span>
+                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.3.0</span>
                         </div>
                         <div id="projectbrief">Full and cross-platform implementation of many libraries without any dependencies.</div>
                     </td>
@@ -99,25 +99,6 @@ $(document).ready(function(){initNavTree('da/d60/wcstring_8hpp.html','../../'); 
 <p>Wcstring utilities.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/de3/types_8hpp_source.html">../defines/types.hpp</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for wcstring.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/d52/wcstring_8hpp__incl.png" border="0" usemap="#ainclude_2stick_2string_2wcstring_8hpp" alt=""/></div>
-<map name="ainclude_2stick_2string_2wcstring_8hpp" id="ainclude_2stick_2string_2wcstring_8hpp">
-<area shape="rect" title="Wcstring utilities." alt="" coords="7,5,153,47"/>
-<area shape="rect" href="../../dd/de3/types_8hpp.html" title="Common types definitions." alt="" coords="5,95,155,121"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d9/d2c/wcstring_8hpp__dep__incl.png" border="0" usemap="#ainclude_2stick_2string_2wcstring_8hppdep" alt=""/></div>
-<map name="ainclude_2stick_2string_2wcstring_8hppdep" id="ainclude_2stick_2string_2wcstring_8hppdep">
-<area shape="rect" title="Wcstring utilities." alt="" coords="91,5,236,47"/>
-<area shape="rect" href="../../d8/dc7/stick__string.html" title=" " alt="" coords="5,102,153,129"/>
-<area shape="rect" href="../../d9/dce/wcstring_8cpp.html" title="Wcstring utilities implementation." alt="" coords="178,95,319,136"/>
-</map>
-</div>
 </div>
 <p><a href="../../da/d60/wcstring_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -144,14 +125,24 @@ Functions</h2></td></tr>
 <tr class="separator:a110b107a7afab070c63135e32418db12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c18b871ffaebc820c460cf7d65650d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a85c18b871ffaebc820c460cf7d65650d">stick::wstr_length</a> (const_wcstring str) noexcept</td></tr>
 <tr class="separator:a85c18b871ffaebc820c460cf7d65650d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52cfa022a2f0ba082c2db963cd18c753"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a52cfa022a2f0ba082c2db963cd18c753">stick::wstr_compare</a> (const_wcstring str_1, const_wcstring str_2, size_t length) noexcept</td></tr>
-<tr class="separator:a52cfa022a2f0ba082c2db963cd18c753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0d924d721f988ed3c5b13170522b4e"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#afc0d924d721f988ed3c5b13170522b4e">stick::wstr_compare</a> (const_wcstring str_1, const_wcstring str_2) noexcept</td></tr>
-<tr class="separator:afc0d924d721f988ed3c5b13170522b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8cb7231836884c48dc3cf93bd3a1de"><td class="memItemLeft" align="right" valign="top">wcstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aae8cb7231836884c48dc3cf93bd3a1de">stick::wstr_copy</a> (const_wcstring source_str, size_t length, wcstring destination_str) noexcept</td></tr>
-<tr class="separator:aae8cb7231836884c48dc3cf93bd3a1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ec785ecd2327cfd611f935a4261911"><td class="memItemLeft" align="right" valign="top">wcstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a80ec785ecd2327cfd611f935a4261911">stick::wstr_copy</a> (const_wcstring source_str, wcstring destination_str) noexcept</td></tr>
-<tr class="separator:a80ec785ecd2327cfd611f935a4261911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d12f143be80f873c1fd39c4e640c1b"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a04d12f143be80f873c1fd39c4e640c1b">stick::wstr_equal</a> (const_wcstring str_1, const_wcstring str_2, size_t length) noexcept</td></tr>
+<tr class="separator:a04d12f143be80f873c1fd39c4e640c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b0bd318e161acf4abbc2fa16ae245d"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a78b0bd318e161acf4abbc2fa16ae245d">stick::wstr_equal</a> (const_wcstring str_1, const_wcstring str_2) noexcept</td></tr>
+<tr class="separator:a78b0bd318e161acf4abbc2fa16ae245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c6d9c689aacb1e2b395cbd0b4541b3"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aa7c6d9c689aacb1e2b395cbd0b4541b3">stick::wstr_sorted</a> (const_wcstring str_1, const_wcstring str_2, size_t length) noexcept</td></tr>
+<tr class="separator:aa7c6d9c689aacb1e2b395cbd0b4541b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f38688b9986915819d336302c143ef"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a35f38688b9986915819d336302c143ef">stick::wstr_sorted</a> (const_wcstring str_1, const_wcstring str_2) noexcept</td></tr>
+<tr class="separator:a35f38688b9986915819d336302c143ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bc295512b3f54c0994d41aab6166b1"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aa3bc295512b3f54c0994d41aab6166b1">stick::wchar_is_numeric</a> (wchar_t character) noexcept</td></tr>
+<tr class="separator:aa3bc295512b3f54c0994d41aab6166b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6614dac5d5b3fab469bc9147a745f2e2"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a6614dac5d5b3fab469bc9147a745f2e2">stick::wstr_is_numeric</a> (const_wcstring string, size_t length) noexcept</td></tr>
+<tr class="separator:a6614dac5d5b3fab469bc9147a745f2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee049430fd38e14a7631acfd52ed99f5"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aee049430fd38e14a7631acfd52ed99f5">stick::wstr_is_numeric</a> (const_wcstring string) noexcept</td></tr>
+<tr class="separator:aee049430fd38e14a7631acfd52ed99f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ec46312b2e0c7c26eaca02a9e786cd"><td class="memItemLeft" align="right" valign="top">wcstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a31ec46312b2e0c7c26eaca02a9e786cd">stick::wstr_copy</a> (const_wcstring source_str, size_t length, wcstring destination_str, bool_t set_end=true) noexcept</td></tr>
+<tr class="separator:a31ec46312b2e0c7c26eaca02a9e786cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16a7010da5e0ee69f2dbaf730767305"><td class="memItemLeft" align="right" valign="top">wcstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#ad16a7010da5e0ee69f2dbaf730767305">stick::wstr_copy</a> (const_wcstring source_str, wcstring destination_str, bool_t set_end=true) noexcept</td></tr>
+<tr class="separator:ad16a7010da5e0ee69f2dbaf730767305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a187ee22d2287b4a8b7121afec6df6d7b"><td class="memItemLeft" align="right" valign="top">const size_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a187ee22d2287b4a8b7121afec6df6d7b">stick::wstr_find</a> (const_wcstring text, size_t text_length, const_wcstring pattern, size_t pattern_length, size_t max_matches=-1ul, bool_t wide_dict=true, size_t alphabet_size=26ul) noexcept</td></tr>
 <tr class="separator:a187ee22d2287b4a8b7121afec6df6d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f59e893dfa7acba242d2406ccea805"><td class="memItemLeft" align="right" valign="top">const size_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a63f59e893dfa7acba242d2406ccea805">stick::wstr_find</a> (const_wcstring text, const_wcstring pattern, size_t max_matches=-1ul, bool_t wide_dict=true, size_t alphabet_size=26ul) noexcept</td></tr>

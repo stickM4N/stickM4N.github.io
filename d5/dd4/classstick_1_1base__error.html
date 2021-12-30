@@ -28,9 +28,9 @@
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr id="projectrow">
-                    <td id="projectlogo"><img alt="Logo" src="../../stick_lib_logo.png"/></td>
+                    <td id="projectlogo"><img alt="Logo" src="../../stick-lib_logo.png"/></td>
                     <td id="projectalign">
-                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.1.0</span>
+                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.3.0</span>
                         </div>
                         <div id="projectbrief">Full and cross-platform implementation of many libraries without any dependencies.</div>
                     </td>
@@ -99,13 +99,15 @@ $(document).ready(function(){initNavTree('d5/dd4/classstick_1_1base__error.html'
 <div class="dynheader">
 Inheritance diagram for stick::base_error:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d7c/classstick_1_1base__error__inherit__graph.png" border="0" usemap="#astick_1_1base__error_inherit__map" alt="Inheritance graph"/></div>
-<map name="astick_1_1base__error_inherit__map" id="astick_1_1base__error_inherit__map">
-<area shape="rect" title=" " alt="" coords="100,5,231,32"/>
-<area shape="rect" href="../../d6/def/classstick_1_1generic__error.html" title=" " alt="" coords="5,80,152,107"/>
-<area shape="rect" href="../../d4/d76/classstick_1_1memory__error.html" title=" " alt="" coords="176,80,331,107"/>
-</map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="../../d5/dd4/classstick_1_1base__error.png" usemap="#stick::base_5Ferror_map" alt=""/>
+  <map id="stick::base_5Ferror_map" name="stick::base_5Ferror_map">
+<area href="../../d3/d47/classstick_1_1cast__error.html" alt="stick::cast_error" shape="rect" coords="0,56,154,80"/>
+<area href="../../d6/def/classstick_1_1generic__error.html" alt="stick::generic_error" shape="rect" coords="164,56,318,80"/>
+<area href="../../d4/d76/classstick_1_1memory__error.html" alt="stick::memory_error" shape="rect" coords="328,56,482,80"/>
+<area href="../../d6/d9e/classstick_1_1out__of__range__error.html" alt="stick::out_of_range_error" shape="rect" coords="492,56,646,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -171,7 +173,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Get the error description. </p><dl class="section return"><dt>Returns</dt><dd>Description cstring. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d6/def/classstick_1_1generic__error.html#ab920fa930a60787648e341c0abb99f67">stick::generic_error</a>, and <a class="el" href="../../d4/d76/classstick_1_1memory__error.html#a326f1bfcadf846a376d2229d1c0f5244">stick::memory_error</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/d47/classstick_1_1cast__error.html#aff50d4d47101e68150dba5ae9d0907f3">stick::cast_error</a>, <a class="el" href="../../d6/def/classstick_1_1generic__error.html#ab920fa930a60787648e341c0abb99f67">stick::generic_error</a>, <a class="el" href="../../d4/d76/classstick_1_1memory__error.html#a326f1bfcadf846a376d2229d1c0f5244">stick::memory_error</a>, and <a class="el" href="../../d6/d9e/classstick_1_1out__of__range__error.html#a1d2c62618c4cfbda5020aad5be6e1fde">stick::out_of_range_error</a>.</p>
 
 </div>
 </div>
@@ -197,7 +199,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Get the error description. Mimic description for std::exception compatibility. </p><dl class="section return"><dt>Returns</dt><dd>Description cstring. </dd></dl>
+<p >Get the error description. Mimic description for std::exception compatibility. </p><dl class="section return"><dt>Returns</dt><dd>Description string. </dd></dl>
 
 </div>
 </div>

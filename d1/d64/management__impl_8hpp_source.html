@@ -28,9 +28,9 @@
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr id="projectrow">
-                    <td id="projectlogo"><img alt="Logo" src="../../stick_lib_logo.png"/></td>
+                    <td id="projectlogo"><img alt="Logo" src="../../stick-lib_logo.png"/></td>
                     <td id="projectalign">
-                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.1.0</span>
+                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.3.0</span>
                         </div>
                         <div id="projectbrief">Full and cross-platform implementation of many libraries without any dependencies.</div>
                     </td>
@@ -177,47 +177,62 @@ $(document).ready(function(){initNavTree('d1/d64/management__impl_8hpp_source.ht
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> type&gt;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="../../db/d60/namespacestick.html#a8b525d28aa752801a59946db9a2f4155">void_t</a> <a class="code hl_function" href="../../db/d60/namespacestick.html#a88df3cf3a71703644902cb802b3742b6">copy</a>(<span class="keyword">const</span> type *source_address, type *destination_address,</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                       <span class="keywordtype">size_t</span> element_amount) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (source_address == destination_address)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (source_address == destination_address or element_amount == 0ul)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> ((source_address &lt; destination_address</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>             and source_address + element_amount &gt;= destination_address)</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            or (destination_address &lt; source_address</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                and destination_address + element_amount &gt;= source_address)) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">throw</span> memory_error(<span class="stringliteral">&quot;Destination data will overwrite source data.&quot;</span>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0ul; i &lt; element_amount; i++)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> type&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="../../db/d60/namespacestick.html#a8b525d28aa752801a59946db9a2f4155">void_t</a> <a class="code hl_function" href="../../db/d60/namespacestick.html#a24ce6e6b15009f37415f93021edca192">move</a>(type *source_address, type *destination_address,</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                       <span class="keywordtype">size_t</span> element_amount) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (source_address == destination_address)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (source_address &lt; destination_address)</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = element_amount - 1; i &lt; -1ul; i--) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(&amp;source_address[i]);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">else</span>   <span class="comment">// destination_address &lt; source_address</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0ul; i &lt; element_amount; i++) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(&amp;source_address[i]);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                and destination_address + element_amount &gt;= source_address))</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">throw</span> memory_error(<span class="stringliteral">&quot;Destination data will overwrite source data. &quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                               <span class="stringliteral">&quot;Consider moving instead.&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0ul; i &lt; element_amount; i++)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> type&gt;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="../../db/d60/namespacestick.html#a8b525d28aa752801a59946db9a2f4155">void_t</a> <a class="code hl_function" href="../../db/d60/namespacestick.html#aeeb64b5729c9d7de40294444a008fb53">move</a>(type *source_address, type *destination_address,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                       <span class="keywordtype">size_t</span> element_amount, <a class="code hl_typedef" href="../../db/d60/namespacestick.html#a25dfff8b0b10407008d386ce2bddbfe6">bool_t</a> set_null) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">if</span> (source_address == destination_address or element_amount == 0ul)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (source_address &lt; destination_address) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = element_amount - 1; i &lt; -1ul; i--)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">if</span> (set_null) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span> (source_address + element_amount &gt;= destination_address)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(source_address + element_amount,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                          destination_address - source_address);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(source_address, element_amount);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}   <span class="comment">// namespace stick</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#   warning This file is included automatically and should not be used on its own!</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif   </span><span class="comment">//_stick_lib_memory_management_impl_</span></div>
-<div class="ttc" id="anamespacestick_html"><div class="ttname"><a href="../../db/d60/namespacestick.html">stick</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d76/arch_8hpp_source.html#l00012">arch.hpp:12</a></div></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        } <span class="keywordflow">else</span> {   <span class="comment">// destination_address &lt; source_address</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0ul; i &lt; element_amount; i++)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <a class="code hl_function" href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">set</a>(&amp;destination_address[i], source_address[i]);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">if</span> (set_null) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <span class="keywordflow">if</span> (destination_address + element_amount &gt;= source_address)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(source_address + element_amount,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                          source_address - destination_address);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    <a class="code hl_function" href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">clear</a>(source_address, element_amount);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}   <span class="comment">// namespace stick</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#   warning This file is included automatically and should not be used on its own!</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#endif   </span><span class="comment">//_stick_lib_memory_management_impl_</span></div>
+<div class="ttc" id="anamespacestick_html"><div class="ttname"><a href="../../db/d60/namespacestick.html">stick</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00017">array.hpp:17</a></div></div>
 <div class="ttc" id="anamespacestick_html_a0fb584b811351f7e84d4452b63ded469"><div class="ttname"><a href="../../db/d60/namespacestick.html#a0fb584b811351f7e84d4452b63ded469">stick::allocate_value</a></div><div class="ttdeci">type * allocate_value(const type &amp;value)</div></div>
-<div class="ttc" id="anamespacestick_html_a24ce6e6b15009f37415f93021edca192"><div class="ttname"><a href="../../db/d60/namespacestick.html#a24ce6e6b15009f37415f93021edca192">stick::move</a></div><div class="ttdeci">void_t move(type *source_address, type *destination_address, size_t element_amount=1ul) noexcept</div></div>
+<div class="ttc" id="anamespacestick_html_a25dfff8b0b10407008d386ce2bddbfe6"><div class="ttname"><a href="../../db/d60/namespacestick.html#a25dfff8b0b10407008d386ce2bddbfe6">stick::bool_t</a></div><div class="ttdeci">bool bool_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00023">types.hpp:23</a></div></div>
 <div class="ttc" id="anamespacestick_html_a2d478300ea3b568b35a7bf9a04a3dd07"><div class="ttname"><a href="../../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07">stick::clear</a></div><div class="ttdeci">void_t clear(type *address, size_t element_amount=1ul) noexcept</div></div>
 <div class="ttc" id="anamespacestick_html_a3f5b89b3c50c2ad05666025ce40abe6a"><div class="ttname"><a href="../../db/d60/namespacestick.html#a3f5b89b3c50c2ad05666025ce40abe6a">stick::allocate</a></div><div class="ttdeci">type * allocate(size_t element_amount=1ul)</div></div>
 <div class="ttc" id="anamespacestick_html_a4c611d63a134f7cb7eb79a85f90fd30a"><div class="ttname"><a href="../../db/d60/namespacestick.html#a4c611d63a134f7cb7eb79a85f90fd30a">stick::deallocate</a></div><div class="ttdeci">void_t deallocate(type *&amp;data)</div></div>
@@ -226,6 +241,7 @@ $(document).ready(function(){initNavTree('d1/d64/management__impl_8hpp_source.ht
 <div class="ttc" id="anamespacestick_html_a8b525d28aa752801a59946db9a2f4155"><div class="ttname"><a href="../../db/d60/namespacestick.html#a8b525d28aa752801a59946db9a2f4155">stick::void_t</a></div><div class="ttdeci">void void_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00017">types.hpp:17</a></div></div>
 <div class="ttc" id="anamespacestick_html_aba2af0435978f2ab792ee3a9c991f364"><div class="ttname"><a href="../../db/d60/namespacestick.html#aba2af0435978f2ab792ee3a9c991f364">stick::set</a></div><div class="ttdeci">void_t set(type *address, const type &amp;value, size_t element_amount=1) noexcept</div></div>
 <div class="ttc" id="anamespacestick_html_aee96b7931448726eb823b0c5e5810fec"><div class="ttname"><a href="../../db/d60/namespacestick.html#aee96b7931448726eb823b0c5e5810fec">stick::allocate_aligned</a></div><div class="ttdeci">type * allocate_aligned(size_t element_amount=1ul)</div></div>
+<div class="ttc" id="anamespacestick_html_aeeb64b5729c9d7de40294444a008fb53"><div class="ttname"><a href="../../db/d60/namespacestick.html#aeeb64b5729c9d7de40294444a008fb53">stick::move</a></div><div class="ttdeci">void_t move(type *source_address, type *destination_address, size_t element_amount=1ul, bool_t set_null=true) noexcept</div></div>
 <div class="ttc" id="atypes_8hpp_html_ac97b8ee753e4405397a42ad5799b0f9e"><div class="ttname"><a href="../../dd/de3/types_8hpp.html#ac97b8ee753e4405397a42ad5799b0f9e">null</a></div><div class="ttdeci">#define null</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00014">types.hpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

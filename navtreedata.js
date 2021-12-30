@@ -28,9 +28,10 @@ var NAVTREE =
     [ "stick::lib", "index.html#autotoc_md0", [
       [ "Requirements", "index.html#autotoc_md1", null ],
       [ "Installation", "index.html#autotoc_md2", null ],
-      [ "Author", "index.html#autotoc_md3", null ],
-      [ "Contributing", "index.html#autotoc_md4", null ],
-      [ "License", "index.html#autotoc_md5", null ]
+      [ "Documentation", "index.html#autotoc_md3", null ],
+      [ "Author", "index.html#autotoc_md4", null ],
+      [ "Contributing", "index.html#autotoc_md5", null ],
+      [ "License", "index.html#autotoc_md6", null ]
     ] ],
     [ "LICENSE", "da/d19/md_LICENSE.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -49,7 +50,8 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -65,7 +67,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"db/d60/namespacestick.html#ae88716a56e6ee0110b81ad29e80a2a4a"
+"d5/db8/classstick_1_1array.html#ab9a0a5c0a8599aa4681b6a8fe371db70",
+"db/d60/namespacestick.html#a21d4f96f9504df28ef2b660dc409ecb6",
+"df/d89/endian_8hpp.html#a4726540f00ea43945a475a5d6cd3c6b9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

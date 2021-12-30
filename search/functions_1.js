@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['clear_0',['clear',['../db/d60/namespacestick.html#a2d478300ea3b568b35a7bf9a04a3dd07',1,'stick']]],
-  ['copy_1',['copy',['../db/d60/namespacestick.html#a88df3cf3a71703644902cb802b3742b6',1,'stick']]]
+  ['begin_0',['begin',['../d5/db8/classstick_1_1array.html#a518163ef4de51b6f851482069a0e7e39',1,'stick::array::begin()'],['../d9/d85/classstick_1_1scoped__pointer.html#a36f0483b774afaf86fb85a7e6b71856a',1,'stick::scoped_pointer::begin()']]]
 ];

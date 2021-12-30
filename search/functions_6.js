@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operator_20type_20_2a_0',['operator type *',['../d9/d85/classstick_1_1scoped__pointer.html#a37108838317e98b9f1e71d6ffcbb56ad',1,'stick::scoped_pointer']]],
-  ['operator_3d_1',['operator=',['../d9/d85/classstick_1_1scoped__pointer.html#ad0ecd179faa9a956200080dcac693d78',1,'stick::scoped_pointer::operator=(const type &amp;value) noexcept'],['../d9/d85/classstick_1_1scoped__pointer.html#a6b0c0b86e9ed5e46be8f06fcc565156c',1,'stick::scoped_pointer::operator=(const type *pointer) noexcept'],['../d9/d85/classstick_1_1scoped__pointer.html#a44fd469c4c9d07c1c5d5d193638ad0ca',1,'stick::scoped_pointer::operator=(const scoped_pointer &amp;pointer) noexcept'],['../d9/d85/classstick_1_1scoped__pointer.html#a84596891c32cad5c5f5bc74afe29bede',1,'stick::scoped_pointer::operator=(scoped_pointer &amp;&amp;pointer) noexcept']]]
+  ['generic_5ferror_0',['generic_error',['../d6/def/classstick_1_1generic__error.html#ad46eb821b8afc6d5cc4819c14a076355',1,'stick::generic_error::generic_error(const_cstring description) noexcept'],['../d6/def/classstick_1_1generic__error.html#ad6240b366fc2861fde1f7b1631b69461',1,'stick::generic_error::generic_error(const generic_error &amp;error) noexcept'],['../d6/def/classstick_1_1generic__error.html#a766fca9e5733b046e1ea511cd2df7cc4',1,'stick::generic_error::generic_error(generic_error &amp;&amp;error) noexcept']]]
 ];

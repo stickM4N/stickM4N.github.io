@@ -28,9 +28,9 @@
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr id="projectrow">
-                    <td id="projectlogo"><img alt="Logo" src="../../stick_lib_logo.png"/></td>
+                    <td id="projectlogo"><img alt="Logo" src="../../stick-lib_logo.png"/></td>
                     <td id="projectalign">
-                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.1.0</span>
+                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.3.0</span>
                         </div>
                         <div id="projectbrief">Full and cross-platform implementation of many libraries without any dependencies.</div>
                     </td>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('d7/da9/generic__error_8cpp_source.html
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="../../d6/def/classstick_1_1generic__error.html#ad46eb821b8afc6d5cc4819c14a076355">generic_error::generic_error</a>(<a class="code hl_typedef" href="../../db/d60/namespacestick.html#a964c4dd8f084a3d56b44fc0090c7ddd5">const_cstring</a> description) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this-&gt;description_cache = <a class="code hl_function" href="../../db/d60/namespacestick.html#af0a1ee91420380dc1ed68c2139a26924">new_str</a>(description, <a class="code hl_function" href="../../db/d60/namespacestick.html#acbbde224adf7a7cc353b7e7bfefb3359">str_length</a>(description));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this-&gt;description_cache = <a class="code hl_function" href="../../db/d60/namespacestick.html#af0a1ee91420380dc1ed68c2139a26924">new_str</a>(description);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="../../d6/def/classstick_1_1generic__error.html#ad46eb821b8afc6d5cc4819c14a076355">generic_error::generic_error</a>(<span class="keyword">const</span> generic_error &amp;error) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        this-&gt;description_cache = <a class="code hl_function" href="../../db/d60/namespacestick.html#af0a1ee91420380dc1ed68c2139a26924">new_str</a>(error.description_cache);</div>
@@ -127,14 +127,13 @@ $(document).ready(function(){initNavTree('d7/da9/generic__error_8cpp_source.html
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}   <span class="comment">// namespace stick</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif   </span><span class="comment">//_stick_lib_error_generic_</span></div>
 <div class="ttc" id="aclassstick_1_1generic__error_html_ab920fa930a60787648e341c0abb99f67"><div class="ttname"><a href="../../d6/def/classstick_1_1generic__error.html#ab920fa930a60787648e341c0abb99f67">stick::generic_error::description</a></div><div class="ttdeci">const_cstring description() const noexcept override</div></div>
 <div class="ttc" id="aclassstick_1_1generic__error_html_ad30d6ccdd964af81b02908587205d58f"><div class="ttname"><a href="../../d6/def/classstick_1_1generic__error.html#ad30d6ccdd964af81b02908587205d58f">stick::generic_error::~generic_error</a></div><div class="ttdeci">~generic_error() noexcept override</div></div>
 <div class="ttc" id="aclassstick_1_1generic__error_html_ad46eb821b8afc6d5cc4819c14a076355"><div class="ttname"><a href="../../d6/def/classstick_1_1generic__error.html#ad46eb821b8afc6d5cc4819c14a076355">stick::generic_error::generic_error</a></div><div class="ttdeci">generic_error(const_cstring description) noexcept</div></div>
-<div class="ttc" id="anamespacestick_html"><div class="ttname"><a href="../../db/d60/namespacestick.html">stick</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d76/arch_8hpp_source.html#l00012">arch.hpp:12</a></div></div>
+<div class="ttc" id="anamespacestick_html"><div class="ttname"><a href="../../db/d60/namespacestick.html">stick</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00017">array.hpp:17</a></div></div>
 <div class="ttc" id="anamespacestick_html_a0a5bf237aff6ddbc9f6f31df457a17b1"><div class="ttname"><a href="../../db/d60/namespacestick.html#a0a5bf237aff6ddbc9f6f31df457a17b1">stick::delete_str</a></div><div class="ttdeci">void delete_str(cstring &amp;str)</div></div>
 <div class="ttc" id="anamespacestick_html_a964c4dd8f084a3d56b44fc0090c7ddd5"><div class="ttname"><a href="../../db/d60/namespacestick.html#a964c4dd8f084a3d56b44fc0090c7ddd5">stick::const_cstring</a></div><div class="ttdeci">const char_t * const_cstring</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00072">types.hpp:72</a></div></div>
-<div class="ttc" id="anamespacestick_html_acbbde224adf7a7cc353b7e7bfefb3359"><div class="ttname"><a href="../../db/d60/namespacestick.html#acbbde224adf7a7cc353b7e7bfefb3359">stick::str_length</a></div><div class="ttdeci">size_t str_length(const_cstring str) noexcept</div></div>
 <div class="ttc" id="anamespacestick_html_af0a1ee91420380dc1ed68c2139a26924"><div class="ttname"><a href="../../db/d60/namespacestick.html#af0a1ee91420380dc1ed68c2139a26924">stick::new_str</a></div><div class="ttdeci">cstring new_str(const_cstring str, size_t length)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

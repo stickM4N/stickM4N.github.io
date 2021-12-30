@@ -28,9 +28,9 @@
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr id="projectrow">
-                    <td id="projectlogo"><img alt="Logo" src="../../stick_lib_logo.png"/></td>
+                    <td id="projectlogo"><img alt="Logo" src="../../stick-lib_logo.png"/></td>
                     <td id="projectalign">
-                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.1.0</span>
+                        <div id="projectname">stick::lib<span id="projectnumber">&#160;0.0.3.0</span>
                         </div>
                         <div id="projectbrief">Full and cross-platform implementation of many libraries without any dependencies.</div>
                     </td>
@@ -88,11 +88,111 @@ $(document).ready(function(){initNavTree('d5/d97/casting_8hpp.html','../../'); i
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">casting.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>String casting.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/de3/types_8hpp_source.html">../defines/types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/db5/casting__impl_8hpp_source.html">../string/casting_impl.hpp</a>&quot;</code><br />
+</div>
 <p><a href="../../d5/d97/casting_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:db/d60/namespacestick"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html">stick</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a36f85ee5c32adf7eb14a6bfb54008f51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d97/casting_8hpp.html#a36f85ee5c32adf7eb14a6bfb54008f51">_stick_lib_string_casting_impl_</a></td></tr>
+<tr class="separator:a36f85ee5c32adf7eb14a6bfb54008f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7f2205588ae88033a1e62cd8b4244e28"><td class="memTemplParams" colspan="2">template&lt;typename type &gt; </td></tr>
+<tr class="memitem:a7f2205588ae88033a1e62cd8b4244e28"><td class="memTemplItemLeft" align="right" valign="top">const_cstring&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a7f2205588ae88033a1e62cd8b4244e28">stick::cast_to_cstr</a> (type value, cstring string=nullptr)</td></tr>
+<tr class="separator:a7f2205588ae88033a1e62cd8b4244e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1fea37c3a23e24b4589f2d93b92a97"><td class="memItemLeft" align="right" valign="top">nullptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a1f1fea37c3a23e24b4589f2d93b92a97">stick::str_cast_to_null</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a1f1fea37c3a23e24b4589f2d93b92a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad765d53973d793ec9ca2b5a9af9f2c50"><td class="memItemLeft" align="right" valign="top">nullptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#ad765d53973d793ec9ca2b5a9af9f2c50">stick::str_cast_to_null</a> (const_cstring string)</td></tr>
+<tr class="separator:ad765d53973d793ec9ca2b5a9af9f2c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad0ce5846e1feabce3f166298bcd7ba"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#adad0ce5846e1feabce3f166298bcd7ba">stick::str_cast_to_bool</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:adad0ce5846e1feabce3f166298bcd7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54402ee2c39a06f6c3a202bfbe668f91"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a54402ee2c39a06f6c3a202bfbe668f91">stick::str_cast_to_bool</a> (const_cstring string)</td></tr>
+<tr class="separator:a54402ee2c39a06f6c3a202bfbe668f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f907e0c94154db608315505c215e157"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a3f907e0c94154db608315505c215e157">stick::str_cast_to_int8</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a3f907e0c94154db608315505c215e157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5fe0ae77d8c23467347162a9de45d3"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a5a5fe0ae77d8c23467347162a9de45d3">stick::str_cast_to_int8</a> (const_cstring string)</td></tr>
+<tr class="separator:a5a5fe0ae77d8c23467347162a9de45d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2678ce507f191061fc7142893e6190a3"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a2678ce507f191061fc7142893e6190a3">stick::str_cast_to_int16</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a2678ce507f191061fc7142893e6190a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a768c2aa1681e3a22072859f8fb3083"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a7a768c2aa1681e3a22072859f8fb3083">stick::str_cast_to_int16</a> (const_cstring string)</td></tr>
+<tr class="separator:a7a768c2aa1681e3a22072859f8fb3083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5243c433847e395e9ffe3a38f18577"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a7a5243c433847e395e9ffe3a38f18577">stick::str_cast_to_int32</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a7a5243c433847e395e9ffe3a38f18577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01666707c74d35ae0801a66a6b8eb026"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a01666707c74d35ae0801a66a6b8eb026">stick::str_cast_to_int32</a> (const_cstring string)</td></tr>
+<tr class="separator:a01666707c74d35ae0801a66a6b8eb026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef09ec2c7d9ba25cc865a55e73d6ae1"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#afef09ec2c7d9ba25cc865a55e73d6ae1">stick::str_cast_to_int64</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:afef09ec2c7d9ba25cc865a55e73d6ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2990fab04ce25c7f0fc09f4044f29123"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a2990fab04ce25c7f0fc09f4044f29123">stick::str_cast_to_int64</a> (const_cstring string)</td></tr>
+<tr class="separator:a2990fab04ce25c7f0fc09f4044f29123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc496e9dc950ea4ee57f67e698feb6b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aefc496e9dc950ea4ee57f67e698feb6b">stick::str_cast_to_uint8</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:aefc496e9dc950ea4ee57f67e698feb6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4177851cea1a023598be653f8d8244"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#afc4177851cea1a023598be653f8d8244">stick::str_cast_to_uint8</a> (const_cstring string)</td></tr>
+<tr class="separator:afc4177851cea1a023598be653f8d8244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0cbeb93e7b0dcf2a3e18bd1e9081e6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a8d0cbeb93e7b0dcf2a3e18bd1e9081e6">stick::str_cast_to_uint16</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a8d0cbeb93e7b0dcf2a3e18bd1e9081e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4bdabd67eea898b7233a467286c79c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#ada4bdabd67eea898b7233a467286c79c">stick::str_cast_to_uint16</a> (const_cstring string)</td></tr>
+<tr class="separator:ada4bdabd67eea898b7233a467286c79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8462e47a46880075682f01eca3a80e1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#aa8462e47a46880075682f01eca3a80e1">stick::str_cast_to_uint32</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:aa8462e47a46880075682f01eca3a80e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f94bc0a4a5bce155a3d64d74a8b957"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#ad3f94bc0a4a5bce155a3d64d74a8b957">stick::str_cast_to_uint32</a> (const_cstring string)</td></tr>
+<tr class="separator:ad3f94bc0a4a5bce155a3d64d74a8b957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b6e206ecdf1b7c83a6d8086f97b081"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a95b6e206ecdf1b7c83a6d8086f97b081">stick::str_cast_to_uint64</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a95b6e206ecdf1b7c83a6d8086f97b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8255ae36a25aff3d5c5a4c2504dc1120"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a8255ae36a25aff3d5c5a4c2504dc1120">stick::str_cast_to_uint64</a> (const_cstring string)</td></tr>
+<tr class="separator:a8255ae36a25aff3d5c5a4c2504dc1120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6381303ab41029f4cd16539853b83681"><td class="memItemLeft" align="right" valign="top">float32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a6381303ab41029f4cd16539853b83681">stick::str_cast_to_float32</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a6381303ab41029f4cd16539853b83681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5ec09339e83e311ea9a65770ffe528"><td class="memItemLeft" align="right" valign="top">float32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a3b5ec09339e83e311ea9a65770ffe528">stick::str_cast_to_float32</a> (const_cstring string)</td></tr>
+<tr class="separator:a3b5ec09339e83e311ea9a65770ffe528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a69a0d2daf92d67a838207f0576a47b"><td class="memItemLeft" align="right" valign="top">double64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a6a69a0d2daf92d67a838207f0576a47b">stick::str_cast_to_double64</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a6a69a0d2daf92d67a838207f0576a47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3477d5e7485c474c92bb0e031f98c98d"><td class="memItemLeft" align="right" valign="top">double64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a3477d5e7485c474c92bb0e031f98c98d">stick::str_cast_to_double64</a> (const_cstring string)</td></tr>
+<tr class="separator:a3477d5e7485c474c92bb0e031f98c98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5071c4b4d62800b494e9e25dd790c915"><td class="memItemLeft" align="right" valign="top">double128_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a5071c4b4d62800b494e9e25dd790c915">stick::str_cast_to_double128</a> (const_cstring string, size_t length)</td></tr>
+<tr class="separator:a5071c4b4d62800b494e9e25dd790c915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28744d17ff5356ef6feef2790cb2bef4"><td class="memItemLeft" align="right" valign="top">double128_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d60/namespacestick.html#a28744d17ff5356ef6feef2790cb2bef4">stick::str_cast_to_double128</a> (const_cstring string)</td></tr>
+<tr class="separator:a28744d17ff5356ef6feef2790cb2bef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >String casting. </p>
+<p >Convert strings to other data types. </p><dl class="section author"><dt>Author</dt><dd>Julio C. Galindo (stickM4N) </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="../../d5/d97/casting_8hpp_source.html">casting.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a36f85ee5c32adf7eb14a6bfb54008f51" name="a36f85ee5c32adf7eb14a6bfb54008f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f85ee5c32adf7eb14a6bfb54008f51">&#9670;&nbsp;</a></span>_stick_lib_string_casting_impl_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _stick_lib_string_casting_impl_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d97/casting_8hpp_source.html#l00247">247</a> of file <a class="el" href="../../d5/d97/casting_8hpp_source.html">casting.hpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.3-->
